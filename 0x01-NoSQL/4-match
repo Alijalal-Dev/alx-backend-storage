@@ -1,2 +1,4 @@
-// A script that lists all documents with name="ALX" in the collection school
-db.school.find({ name: "ALX" });
+// A script that lists documents with name="ALX" using aggregation
+db.school.aggregate([
+  { $match: { name: "ALX" } }
+])
